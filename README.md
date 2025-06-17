@@ -31,18 +31,20 @@ O Comparador de Números de Série é uma aplicação front-end que permite aos 
 
 🖼️ Como ficou
 
-*(Aqui você pode adicionar screenshots do seu projeto. Substitua os textos abaixo pelas suas imagens.)*
-
 **Interface Principal**
-![Screenshot da Interface Principal](link-para-sua-imagem-da-interface-principal.png)
+![Screenshot da Interface Principal](imgs/inicial.png)
 _Visão geral da interface principal, mostrando as áreas de texto e botões._
 
+<br>
+
 **Processamento de Dados**
-![Screenshot do Processamento de Dados](link-para-sua-imagem-de-processamento.png)
+![Screenshot do Processamento de Dados](imgs/funcionamento.png)
 _Exemplo da ferramenta em ação, mostrando a formatação e divisão em blocos._
 
+<br>
+
 **Mini Tabela**
-![Screenshot da Mini Tabela](link-para-sua-imagem-da-mini-tabela.png)
+![Screenshot da Mini Tabela](imgs/tabela.png)
 _Detalhe da mini tabela integrada para dados adicionais._
 
 <br>
