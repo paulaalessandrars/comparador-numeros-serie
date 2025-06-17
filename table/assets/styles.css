@@ -1,0 +1,91 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #4c90af;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-clean, .btn-copy {
+  padding: 10px 20px;
+  background-color: #4c90af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-clean:hover, .btn-copy:hover {
+  background-color: #0176a3;
+}
+
+.paste-area {
+  width: 100%;
+  max-width: 1200px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-height: 600px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 20px;
+  text-align: left;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4c90af;
+  color: white;
+  text-align: center;
+}
+
+td {
+  background-color: #d0d7da99;
+}
+
+td:hover {
+  background-color: #f1f1f1;
+}
+
+.selected {
+  background-color: #0175a3a9 !important;
+}
+
+td:empty {
+  background-color: #f4f7fb;
+}
+
+tr {
+  height: 60px;
+}

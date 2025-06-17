@@ -1,0 +1,242 @@
+/* Variáveis de tema */
+:root {
+    --bg-light: #f3f6f9;
+    --bg-dark: #2f3c48;
+    --primary-light: #4c90af;
+    --primary-dark: #4c90af;
+    --secondary-light: #f39c12;
+    --secondary-dark: #f39c12;
+    --text-light: #2f3c48;
+    --text-dark: #ecf0f1;
+    --text-muted: #999;
+    --textarea-bg-light: #ffffff;
+    --textarea-bg-dark: #34495e;
+    --textarea-border-light: #eee;
+    --textarea-border-dark: #555;
+    --highlight: #3498db;
+}
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Botão tema */
+.btn-alterar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: none;
+    box-shadow: none;
+}
+
+.btn-alterar:hover {
+    transform: scale(1.1);
+}
+
+body.dark .btn-alterar {
+    color: #fff;
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 100px auto 40px auto; /* Ajustado para dar espaço para o botão */
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-light);
+    margin-bottom: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+body.dark h1 {
+    color: var(--highlight);
+}
+
+/* Área de texto */
+.textarea-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.textarea-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Área de texto */
+textarea {
+    width: 100%;
+    height: 220px;
+    padding: 30px 15px 15px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    resize: vertical;
+    background-color: var(--bg-light); /* Cor do fundo igual ao body */
+    color: var(--text-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s;
+}
+
+textarea:focus {
+    box-shadow: 0 0 12px rgba(52, 152, 219, 0.4);
+    outline: none;
+}
+
+body.dark textarea {
+    background-color: var(--bg-dark); /* Cor do fundo igual ao body no modo dark */
+    color: var(--text-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Label flutuante */
+label {
+    font-size: 20px;
+    color: var(--text-muted);
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+body.dark label {
+    color: var(--text-muted);
+}
+
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+    top: -30px;
+    font-size: 18px;
+    color: var(--primary-light);
+}
+
+body.dark textarea:focus + label,
+body.dark textarea:not(:placeholder-shown) + label {
+    color: var(--highlight);
+}
+
+/* Botões */
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.btn,
+.btn-limpar {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+.btn {
+    background-color: var(--primary-light);
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #0176a3;
+}
+
+.btn-limpar {
+    background-color: #e74d3cde;
+    color: #fff;
+}
+
+.btn-limpar:hover {
+    background-color: #c0392b;
+}
+
+body.dark .btn {
+    background-color: var(--primary-dark);
+}
+
+body.dark .btn:hover {
+    background-color: #0176a3;
+}
+
+body.dark .btn-limpar {
+    background-color: #e74d3cde
+}
+
+body.dark .btn-limpar:hover {
+    background-color: #c0392b;;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .textarea-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .btn,
+    .btn-limpar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-alterar {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+.duplicado {
+    color: red;
+    font-weight: bold;
+  }
+
+.table {
+    border: none
+}
+

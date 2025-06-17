@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabela Interativa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Botões -->
+  <div class="buttons-container">
+    <button class="btn-clean" onclick="clearSelectedColumn()">Limpar Coluna Selecionada</button>
+    <button class="btn-copy" onclick="copySelectedColumn()">Copiar Coluna Selecionada</button>
+    <button class="btn-clean" onclick="clearTable()">Limpar Tabela</button>
+    <button class="btn-copy" id="undoBtn">Desfazer</button>
+  </div>
+
+  <!-- Tabela -->
+  <div class="paste-area">
+    <table contenteditable="true" id="table">
+      <thead>
+        <tr>
+          <th>A</th><th>B</th><th>C</th><th>D</th>
+          <th>E</th><th>F</th><th>G</th><th>H</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td><td></td><td></td><td></td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

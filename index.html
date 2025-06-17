@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comparador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Container para o título e o botão de alternância de tema -->
+  <div class="header">
+    <h1><picture>
+  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4a1/512.webp" type="image/webp">
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4a1/512.gif" alt="💡" width="32" height="32">
+</picture>Comparador de Números de Série</h1>
+
+
+    <!-- Botão de alternância de modo -->
+    <button class="btn-alterar" onclick="toggleTheme()"></button> <!-- O emoji será adicionado dinamicamente -->
+  </div>
+
+  <div class="container">
+    <div class="textarea-container">
+      <div class="textarea-box">
+        <textarea id="coluna1" placeholder=" "></textarea>
+        <label for="coluna1">Número(s) de série enviado(s)</label>
+      </div>
+
+      <div class="textarea-box">
+        <textarea id="coluna2" placeholder=" " readonly></textarea>
+        <label for="coluna2">Números com adição de ";"</label>
+      </div>
+
+      <div class="textarea-box">
+        <textarea id="coluna3" placeholder=" "></textarea>
+        <label for="coluna3">Encontrado(s) no sistema</label>
+      <!--  <object data="table.html" type="text/html" width="100%" height="600px" style="border: 2px solid #4CAF50;"></object>
+        <iframe src="table.html" width="100%" height="600px" style="border: 2px solid #4CAF50;"></iframe> -->
+      </div>
+
+      <div class="textarea-box">
+        <textarea id="coluna4" placeholder=" " readonly></textarea>
+        <label for="coluna4">Resultados</label>
+      </div>
+    </div>
+
+    <div id="mensagens"></div>
+
+    <div class="btn-container">
+      <button class="btn" onclick="gerar()">Gerar Resultado</button>
+      <button class="btn-limpar" onclick="limparCampos()">Limpar Campos</button>
+    </div>
+
+    <object class="table" data="table/index.html" type="text/html" width="100%" height="600px"></object>
+
+
+    <!-- Mensagem para a quantidade de números e duplicados -->
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
